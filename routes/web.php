@@ -107,3 +107,23 @@ Route::get('/', function () {
 Auth::routes(['verify'=>true]);
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->middleware('verified');
+
+
+
+
+
+
+//Roles
+Route::get('/user/roles/index', 'RoleController@index')->name('role_index');
+Route::get('/user/roles/create', 'RoleController@RoleCreate')->name('role_create_page');
+Route::post('/user/roles/create', 'RoleController@create')->name('role_create');
+Route::get('/user/roles/{id}/update', 'RoleController@RoleUpdate')->name('role_update_page');
+Route::PATCH('/user/roles/update/{id}', 'RoleController@update')->name('role_update');
+Route::DELETE('/user/roles/delete/{id}', 'RoleController@delete')->name('role_delete');
+//roles end
+//Users
+Route::get('/user/index', 'UserController@index')->name('user_index');
+Route::get('/user/assignrole/{user}/update', 'UserController@UserUpdate')->name('user_update_page');
+Route::PATCH('/user/assignrole/update/{user}','UserController@update')->name('user_update');
+Route::DELETE('/user/delete/{user}', 'UserController@delete')->name('user_delete');
+//users end
