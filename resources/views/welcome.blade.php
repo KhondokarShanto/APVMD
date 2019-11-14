@@ -74,7 +74,7 @@
                   <a href="{{ url('/requisition') }}">Requisition</a>
                   <a href="{{ url('/order') }}">Order</a>
                   <a href="{{ url('/area') }}">Areas</a>
-                  <a href="{{ route('taskcreate') }}">Task</a>
+                  <a href="{{ url('/task') }}">Task</a>
                   <a href="{{ url('/contact') }}">Contact Us</a>
                     @auth
                         <a href="{{ url('/home') }}">Home</a>

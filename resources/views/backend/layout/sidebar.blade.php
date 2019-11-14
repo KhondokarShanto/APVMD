@@ -45,6 +45,7 @@
                 <a href="{{ url('/admin/order') }}"><i class="fa fa-edit fa-fw"></i> Order</a>
             </li>
 
+
             <!-- roles -->
       <li class="nav-item">
         <a class="nav-link" href="{{ route('role_index') }}"><i class="fas fa-fw fa-folder"></i><span>User Roles</span></a>

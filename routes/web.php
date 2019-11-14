@@ -37,12 +37,10 @@
     Route::get('/requisition', 'RequisitionController@index')->name('requisition');
     Route::post('/requisition/create', 'RequisitionController@create')->name('requisition_create');
 
-    //taskpage create..............................................................
-    Route::get('/taskcreate', 'TaskController@TaskCreate')->name('taskcreate');
-    Route::post('/taskcreate/create', 'TaskController@create')->name('task_create');
+    //taskpage ..............................................................
+    Route::get('/task', 'TaskController@index')->name('task');
+    Route::post('/task/create', 'TaskController@create')->name('task_create');
 
-    //taskpage view...............................................................
-    Route::get('/taskview/index', 'TaskController@TaskView')->name('task_view');
 
 
     //dashboard layout
@@ -70,6 +68,10 @@ Route::get('/admin/order', 'OrderController@showOrder')->name('dashorder');
 Route::get('/create/order', 'OrderController@createOrder')->name('createOrder');
 Route::post('/store/order', 'OrderController@store')->name('storeOrder');
 
+//task.................................................................
+Route::get('/admin/task', 'TaskController@showTask')->name('dashtask');
+Route::get('/create/task', 'TaskController@createTask')->name('createTask');
+Route::post('/store/task', 'TaskController@store')->name('storeTask');
 
 //area...................................
 Route::get('/admin/area', 'AreaController@showArea')->name('dasharea');

@@ -25,7 +25,7 @@
 
         <div class="card">
           <div class="card-header">
-            {{_('Confirm Your Order')}}
+            {{_('Confirm task')}}
           </div>
           <form id="task" action="{{ route('task_create') }}" method="post">
             @csrf

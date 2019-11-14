@@ -1,5 +1,10 @@
-@extends('layouts.app')
+@extends('backend.index');
+
 @section('content')
+<div class="card">
+  <h2>All Tasks</h2>
+  <div>
+    <a class="btn-success" href="{{'/create/task'}}">Create new task</a>
 <div class="container">
 
   <div class="card">
@@ -21,11 +26,13 @@
           <td>{{$task ->name}}</td>
           <td>{{$task ->email}}</td>
           <td>{{$task ->phone}}</td>
-        
+
         </tr>
         @endforeach
   </tbody>
 </table>
+</div>
+</div>
 </div>
 </div>
 @endsection

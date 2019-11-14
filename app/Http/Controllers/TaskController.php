@@ -8,19 +8,20 @@ use App\Task;
 class TaskController extends Controller
 {
 
-  function TaskView()
-  {
-    $tasks = Task::all();
-    return view('frontpage.taskpage.taskindex',compact('tasks'));
 
-  }
-
-
-
-  function TaskCreate()
-  {
-    return view ('frontpage.taskpage.taskcreate');
-  }
+    function index()
+    {
+      return view ('frontpage.taskpage.index');
+    }
+    function showTask()
+    {
+      $tasks = Task::all();
+      return view('backend.task',compact('tasks'));
+    }
+    function createTask()
+    {
+      return view('backend.createTask');
+    }
 
   function create(Request $request)
   {
