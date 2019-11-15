@@ -1,7 +1,7 @@
 @extends('backend.index');
 
 @section('content')
-  <form id="area" action="{{ route('area_create') }}" method="post">
+  <form id="area" action="{{ route('storeArea') }}" method="post">
     @csrf
     <div>
       <label for="name"><b>Name</b></label>
@@ -14,5 +14,5 @@
     <div>
       <a href="{{'/store/area'}}"><button type="submit" class="btn btn-primary">Create</button></a>
     </div>
-  </form>             
+  </form>
 @endsection

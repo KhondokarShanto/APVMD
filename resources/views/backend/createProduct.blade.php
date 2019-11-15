@@ -1,7 +1,7 @@
 @extends('backend.index');
 
 @section('content')
-<form id="product" action="{{ route('product_create') }}" method="post">
+<form id="product" action="{{ route('storeProduct') }}" method="post">
   @csrf
 
   <div>

@@ -60,43 +60,43 @@ Route::get('/admin/contact', 'Dashboard\DashboardContactController@index')->name
 
 Route::get('/admin/product', 'Product\ProductController@showProduct')->name('dashproduct');
 Route::get('/create/product', 'Product\ProductController@createProduct')->name('createProduct');
-Route::post('/store/product', 'Product\ProductController@store')->name('storeProduct');
+Route::post('/store/product', 'Product\ProductController@create')->name('storeProduct');
 
 
 //order.................................................
 Route::get('/admin/order', 'Order\OrderController@showOrder')->name('dashorder');
 Route::get('/create/order', 'Order\OrderController@createOrder')->name('createOrder');
-Route::post('/store/order', 'Order\OrderController@store')->name('storeOrder');
+Route::post('/store/order', 'Order\OrderController@create')->name('storeOrder');
 
 //task.................................................................
 Route::get('/admin/task', 'Task\TaskController@showTask')->name('dashtask');
 Route::get('/create/task', 'Task\TaskController@createTask')->name('createTask');
-Route::post('/store/task', 'Task\TaskController@store')->name('storeTask');
+Route::post('/store/task', 'Task\TaskController@create')->name('storeTask');
 
 //area...................................
 Route::get('/admin/area', 'Area\AreaController@showArea')->name('dasharea');
 Route::get('/create/area', 'Area\AreaController@createArea')->name('createArea');
-Route::post('/store/area', 'Area\AreaController@store')->name('storeArea');
+Route::post('/store/area', 'Area\AreaController@create')->name('storeArea');
 
 //distributor.......................................
 Route::get('/admin/distributor', 'Distributor\DistributorController@showDistributor')->name('distributor');
 Route::get('/create/distributor', 'Distributor\DistributorController@createDistributor')->name('createDistributor');
-Route::post('/store/distributor', 'Distributor\DistributorController@store')->name('storeDistributor');
+Route::post('/store/distributor', 'Distributor\DistributorController@create')->name('storeDistributor');
 
 //supplier...............................................
 Route::get('/admin/supplier', 'Supplier\SupplierController@showSupplier')->name('supplier');
 Route::get('/create/supplier', 'Supplier\SupplierController@createSupplier')->name('createSupplier');
-Route::get('/store/supplier', 'Supplier\SupplierController@store')->name('storeSupplier');
+Route::post('/store/supplier', 'Supplier\SupplierController@create')->name('storeSupplier');
 
 //merchandiser ...............................................................
 Route::get('/admin/merchandiser', 'Merchandiser\MerchandiserController@showMerchandiser')->name('merchandiser');
 Route::get('/create/merchandiser', 'Merchandiser\MerchandiserController@createMerchandiser')->name('createMerchandiser');
-Route::post('/store/merchandiser', 'Merchandiser\MerchandiserController@store')->name('storeMerchandiser');
+Route::post('/store/merchandiser', 'Merchandiser\MerchandiserController@create')->name('storeMerchandiser');
 
 //requisition .....................................................................
 Route::get('/admin/requisition', 'RequisitionController@showRequisition')->name('requisition');
 Route::get('/create/requisition', 'RequisitionController@createRequisition')->name('createRequisition');
-Route::post('/store/requisition', 'RequisitionController@store')->name('storeRequisition');
+Route::post('/store/requisition', 'RequisitionController@create')->name('storeRequisition');
 
 //backend...............................
 
