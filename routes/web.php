@@ -77,6 +77,13 @@ Route::post('/store/task', 'Task\TaskController@create')->name('storeTask');
 Route::get('/admin/area', 'Area\AreaController@showArea')->name('dasharea');
 Route::get('/create/area', 'Area\AreaController@createArea')->name('createArea');
 Route::post('/store/area', 'Area\AreaController@create')->name('storeArea');
+//try update and delete of area............................................................
+// Route::get('/store/area/{id}/update', 'Area\AreaController@AreaUpdate')->name('area_update_page');
+// Route::PATCH('/store/area/update/{id}', 'Area\AreaController@update')->name('area_update');
+// Route::DELETE('/store/area/delete/{id}', 'Area\AreaController@delete')->name('area_delete');
+
+
+
 
 //distributor.......................................
 Route::get('/admin/distributor', 'Distributor\DistributorController@showDistributor')->name('distributor');

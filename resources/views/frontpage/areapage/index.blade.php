@@ -21,7 +21,7 @@
           <div class="card-header">
             {{_('Recomend the areas we can cover')}}
           </div>
-          <form id="area" action="{{ route('area_create') }}" method="post">
+          <form id="area" action="{{ route('storeArea') }}" method="post">
             @csrf
             <div>
               <label for="name"><b>Name</b></label>
