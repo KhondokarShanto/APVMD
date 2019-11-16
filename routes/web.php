@@ -67,6 +67,10 @@ Route::post('/store/product', 'Product\ProductController@create')->name('storePr
 Route::get('/admin/order', 'Order\OrderController@showOrder')->name('dashorder');
 Route::get('/create/order', 'Order\OrderController@createOrder')->name('createOrder');
 Route::post('/store/order', 'Order\OrderController@create')->name('storeOrder');
+Route::GET('order/{id}/','Order\OrderController@edit')->name('orderEdit');
+Route::Any('order/update/{id}', 'Order\OrderController@update')->name('orderUpdate');
+Route::GET('order/delete/{id}','Order\OrderController@delete')->name('orderdelete');
+
 
 //task.................................................................
 Route::get('/admin/task', 'Task\TaskController@showTask')->name('dashtask');
@@ -77,13 +81,9 @@ Route::post('/store/task', 'Task\TaskController@create')->name('storeTask');
 Route::get('/admin/area', 'Area\AreaController@showArea')->name('dasharea');
 Route::get('/create/area', 'Area\AreaController@createArea')->name('createArea');
 Route::post('/store/area', 'Area\AreaController@create')->name('storeArea');
-//try update and delete of area............................................................
-// Route::get('/store/area/{id}/update', 'Area\AreaController@AreaUpdate')->name('area_update_page');
-// Route::PATCH('/store/area/update/{id}', 'Area\AreaController@update')->name('area_update');
-// Route::DELETE('/store/area/delete/{id}', 'Area\AreaController@delete')->name('area_delete');
-
-
-
+Route::GET('area/{id}/','Area\AreaController@edit')->name('areaEdit');
+Route::Any('area/update/{id}', 'Area\AreaController@update')->name('areaUpdate');
+Route::GET('area/delete/{id}','Area\AreaController@delete')->name('areadelete');
 
 //distributor.......................................
 Route::get('/admin/distributor', 'Distributor\DistributorController@showDistributor')->name('distributor');

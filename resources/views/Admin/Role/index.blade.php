@@ -44,13 +44,6 @@
               <td>{{$role ->name}}</td>
               <td><a class="btn btn-success" href="{{ route('role_update_page', $role->id)}}">Update</a> <b></b>
               </td>
-              <td>
-                <form action="{{ route('role_delete', $role->id)}}" method="post">
-                                      @csrf
-                                      @method('DELETE')
-                                      <button class="btn btn-danger" type="submit">Delete</button>
-                                    </form>
-              </td>
             </tr>
             @endforeach
       </tbody>

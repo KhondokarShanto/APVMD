@@ -15,10 +15,11 @@
           <th scope="col">Email</th>
           <th scope="col">Phone</th>
           <th scope="col">Order</th>
-          <th scope="col">Details</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
+        <?php $id=1?>
         @foreach($orders as $order)
             <tr>
               <td>{{$order ->id}}</td>
@@ -26,7 +27,15 @@
               <td>{{$order ->email}}</td>
               <td>{{$order ->phone}}</td>
               <td>{{$order ->order}}</td>
-              <td><a class="btn btn-success" href="">Update</a> <b></b><a class="btn btn-danger" href="">Delete</a></td>
+              <td><a href="{{route('orderEdit',[$order->id])}}"class="btn btn-success">
+                Update
+              </a>
+              <b>
+              </b>
+              <a href="{{route('orderdelete',[$order->id])}}"class="btn btn-danger">
+                Delete
+              </a>
+            </td>
             </tr>
             @endforeach
       </tbody>

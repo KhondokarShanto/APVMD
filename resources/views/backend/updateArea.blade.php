@@ -2,31 +2,25 @@
 @extends('backend.index');
 
 @section('content')
-<div class="card uper">
+<div class="card">
   <div class="card-header">
-    Update Areas
+    {{_('Recomend the areas we can cover')}}
   </div>
-  <div class="card-body">
-    @if ($errors->any())
-      <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-              <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-      </div><br />
-    @endif
-    <form method="POST" action="{{ route('area_update', $areas->id) }}">
-      @csrf
-      @method('PATCH')
-          <div class="form-group">
-
-              <label for="name">Name:</label>
-              <input type="text" class="form-control" name="name" value="{{ $areas->name }}"/>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Update</button>
-      </form>
-  </div>
+  <form id="area" action="{{ route('areaUpdate', $edit->id) }}" method="POST">
+    @csrf
+    @method('PATCH')
+    <div>
+      <label for="name"><b>Name</b></label>
+      <input type="text" name="name" value="{{$edit->name}}" placeholder="Enter Name" required>
+    </div>
+    <div>
+      <label for="name"><b>Area Code</b></label>
+      <input type="text" name="code" value="{{$edit->code}}" placeholder="Area Code" required>
+    </div>
+    <div>
+      <a><button type="submit" class="btn btn-primary">Submit</button></a>
+    </div>
+  </form>
 </div>
+
 @endsection

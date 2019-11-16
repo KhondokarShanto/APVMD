@@ -30,4 +30,29 @@ class OrderController extends Controller
     ]);
     return back();
   }
+  function edit($id)
+  {
+    $edit= Order::find($id);
+            return view('backend.updateOrder',compact('edit'));
+
+  }
+
+  function update(Request $request,$id)
+  {
+    $data=Order::findorFail($id);
+    $data->update([
+      'name'=>$request->name,
+      'email'=>$request->email,
+      'phone'=>$request->phone,
+      'order'=>$request->order,
+    ]);
+
+    return redirect()->route('dashorder');
+  }
+  function delete($id)
+  {
+    $data=Order::find($id);
+        $data->delete();
+    return back();
+  }
 }

@@ -9,20 +9,30 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th scope="col">ID</th>
+          <th scope="col">Srial</th>
           <th scope="col">Name</th>
           <th scope="col">Area-Code</th>
-          <th scope="col">Details</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
+        <?php $id=1?>
         @foreach($areas as $area)
           <tr>
-            <td>{{$area ->id}}</td>
+            <td>{{$id++}}</td>
             <td>{{$area ->name}}</td>
             <td>{{$area ->code}}</td>
-            <td><a class="btn btn-success" href="">Update</a> <b></b><a class="btn btn-danger" href="">Delete</a></td>
+            <td><a href="{{route('areaEdit',[$area->id])}}"class="btn btn-success">
+              Update
+            </a>
+            <b>
+            </b>
+            <a href="{{route('areadelete',[$area->id])}}"class="btn btn-danger">
+              Delete
+            </a>
+          </td>
           </tr>
+
         @endforeach
       </tbody>
     </table>

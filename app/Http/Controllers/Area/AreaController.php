@@ -29,4 +29,27 @@ class AreaController extends Controller
     ]);
     return back();
   }
+  function edit($id)
+  {
+    $edit= Area::find($id);
+            return view('backend.updateArea',compact('edit'));
+
+  }
+
+  function update(Request $request,$id)
+  {
+    $data=Area::findorFail($id);
+    $data->update([
+        'name'=>$request->name,
+        'code'=>$request->code,
+    ]);
+
+    return redirect()->route('dasharea');
+  }
+  function delete($id)
+  {
+    $data=Area::find($id);
+        $data->delete();
+    return back();
+  }
 }
