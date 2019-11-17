@@ -61,6 +61,9 @@ Route::get('/admin/contact', 'Dashboard\DashboardContactController@index')->name
 Route::get('/admin/product', 'Product\ProductController@showProduct')->name('dashproduct');
 Route::get('/create/product', 'Product\ProductController@createProduct')->name('createProduct');
 Route::post('/store/product', 'Product\ProductController@create')->name('storeProduct');
+Route::GET('product/{id}/','Product\ProductController@edit')->name('productEdit');
+Route::Any('product/update/{id}', 'Product\ProductController@update')->name('productUpdate');
+Route::GET('product/delete/{id}','Product\ProductController@delete')->name('productdelete');
 
 
 //order.................................................

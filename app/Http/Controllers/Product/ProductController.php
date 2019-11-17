@@ -29,6 +29,30 @@ class ProductController extends Controller
         'product'=>$request->product,
     ]);
     return back();
+  }
+  function edit($id)
+  {
+    $edit= Product::find($id);
+            return view('backend.updateProduct',compact('edit'));
 
+  }
+
+  function update(Request $request,$id)
+  {
+    $data=Product::findorFail($id);
+    $data->update([
+      'name'=>$request->name,
+      'email'=>$request->email,
+      'phone'=>$request->phone,
+      'product'=>$request->product,
+    ]);
+
+    return redirect()->route('dashproduct');
+  }
+  function delete($id)
+  {
+    $data=Product::find($id);
+        $data->delete();
+    return back();
   }
 }

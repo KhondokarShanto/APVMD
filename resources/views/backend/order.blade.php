@@ -27,7 +27,8 @@
               <td>{{$order ->email}}</td>
               <td>{{$order ->phone}}</td>
               <td>{{$order ->order}}</td>
-              <td><a href="{{route('orderEdit',[$order->id])}}"class="btn btn-success">
+              <td>
+                <a href="{{route('orderEdit',[$order->id])}}"class="btn btn-success">
                 Update
               </a>
               <b>

@@ -17,13 +17,13 @@
     <div class="form-group row">
        <label for="email"class="col-md-4 col-form-label text-md-right">Email</label>
         <div class="col-md-6">
-      <input type="text" name="email"value="{{$edit->email}}" placeholder="Enter Email" required="required" autofocus="autofocus" class="form-control">
+      <input type="text" name="email" value="{{$edit->email}}" placeholder="Enter Email" required="required" autofocus="autofocus" class="form-control">
     </div>
     </div>
     <div class="form-group row">
       <label for="phone"class="col-md-4 col-form-label text-md-right">Phone</label>
       <div class="col-md-6">
-      <input type="number" name="phone"value="{{$edit->phone}}" placeholder="Enter phone" required="required" autofocus="autofocus" class="form-control">
+      <input type="number" name="phone" value="{{$edit->phone}}" placeholder="Enter phone" required="required" autofocus="autofocus" class="form-control">
     </div>
     </div>
     <div class="col-md-6">

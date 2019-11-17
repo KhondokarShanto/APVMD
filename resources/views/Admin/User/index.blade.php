@@ -16,10 +16,9 @@
                   <div class="card-header">{{ __('User Table') }}</div>
 
                   <div class="col-md-8 offset-md-0">
-                      <a href=""  class="btn btn-primary">
-                        <!-- {{ route('role_create_page')}} -->
-                          {{ __('Register New') }}
-                      </a>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                      {{ __('Register New') }}
+                    </button>
                   </div>
                   <div class="card-body">
 
@@ -56,6 +55,63 @@
                 </div>
               </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Provide Registration info</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">First name</label>
+                        <input type="text" class="form-control" id="" aria-describedby="" placeholder="Enter First Name">
+
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Role</label><br>
+                        <select class="custom-select">
+                          <option selected>Open this select menu</option>
+                          @foreach ($roles as $role)
+                            <option value="{{ $role->name}}">{{ $role->name}}</option>
+                          @endforeach
+                        </select>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Create User</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ends modal -->
         </div>
 </div>
 @endsection

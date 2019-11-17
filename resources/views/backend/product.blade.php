@@ -25,7 +25,16 @@
           <td>{{$product ->email}}</td>
           <td>{{$product ->phone}}</td>
           <td>{{$product ->product}}</td>
-          <td><a class="btn btn-success" href="">Update</a> <b></b><a class="btn btn-danger" href="">Delete</a></td>
+          <td>
+            <a href="{{route('productEdit',[$product->id])}}"class="btn btn-success">
+          Update
+        </a>
+        <b>
+        </b>
+        <a href="{{route('productdelete',[$product->id])}}"class="btn btn-danger">
+          Delete
+        </a>
+      </td>
         </tr>
         @endforeach
   </tbody>
