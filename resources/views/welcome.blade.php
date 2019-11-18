@@ -76,6 +76,8 @@
                   <a href="{{ url('/area') }}">Areas</a>
                   <a href="{{ url('/task') }}">Task</a>
                   <a href="{{ url('/contact') }}">Contact Us</a>
+
+
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
@@ -96,8 +98,8 @@
                 <div class="links">
 
 
-<!--
-                      @if (Route::has('login'))
+
+                      <!-- @if (Route::has('login'))
                       @auth
                       <a href="{{ url('/home') }}">Home</a>
                       @else
